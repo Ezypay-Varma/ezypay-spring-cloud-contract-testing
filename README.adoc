@@ -19,7 +19,7 @@ Can also be done on following ways (Ref to advanced section at the bottom)
 
 Both for REST and Messaging. Built with Maven.
 
-=== Required Java 8 to be installed locally.
+Required Java 8 and Maven to be installed locally.
 
 == Projects
 
