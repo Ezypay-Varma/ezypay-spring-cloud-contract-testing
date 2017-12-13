@@ -1,4 +1,4 @@
-= Spring Cloud Contract samples
+= Spring Cloud Contract
 
 This repository contains the consumer and the producer applications to use with Spring Cloud Contract
 project.
