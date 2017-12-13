@@ -1,0 +1,86 @@
+= Spring Cloud Contract samples
+
+This repository contains the consumer and the producer applications to use with Spring Cloud Contract
+project.
+
+It contains one main `master` branch where we test against the latest versions of
+Spring Cloud Contract.
+
+This repository shows examples of
+
+- storing contracts on the producer side
+
+Can also be done on following ways (Ref to advanced section at the bottom)
+
+- storing producer contracts on consumer side and vice versa
+- storing contracts on remote artifact manager like (Nexus)
+- storing contracts in a common repo
+- passing stubs via Rest docs
+
+Both for REST and Messaging. Built with Maven.
+
+=== Required Java 8 to be installed locally.
+
+== Projects
+
+=== Producer
+
+The producer application contains contracts for both REST and messaging
+communication. From these contracts tests and stubs will be generated.
+
+The producer in the contract also uses features like usage of common libraries, different
+combination of dynamic properties.
+
+It also uses scenario based contracts. That means that the produced stubs are stateful.
+
+=== Consumer
+
+The consumer application is using the stubs of the producer for both
+rest and messaging.
+
+It also contains the consumer side of the stateful scenario case. By calling the same endpoint a couple
+ of times we get different responses due to changing state.
+
+== How to build it?
+
+=== Windows
+
+You can run Maven from the root folder of producer project to create ans install stubs. So from a clean checkout:
+
+[source,bash]
+----
+.\mvnw clean install -Ptest
+----
+
+Once installed run below command to run all tests(auto generated tests and your tests)
+
+[source,bash]
+----
+.\mvnw clean install
+----
+
+=== Mac/Linux
+
+You can run Maven from the root folder of producer project to create ans install stubs. So from a clean checkout:
+
+[source,bash]
+----
+./mvnw clean install -Ptest
+----
+
+Once installed run below command to run all tests(auto generated tests and your tests)
+
+[source,bash]
+----
+./mvnw clean install
+----
+
+The order should be as follows
+
+- producer
+- consumer
+
+== Advance
+
+You can also go through the https://spring-cloud-samples.github.io/spring-cloud-contract-samples/workshops.html[Spring Cloud Contract Workshops]
+to learn how to use the tool by example.
